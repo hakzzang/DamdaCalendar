@@ -1,2 +1,3 @@
 rootProject.name = "DamdaCalendar"
 include ':app'
+include ':compose-test'
