@@ -5,8 +5,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath Libs.build_gradle
-        classpath Libs.kotlin_gradle_plugin
+        classpath(Libs.Gradle.build)
+        classpath(Libs.Kotlin.gradle_plugin)
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -20,6 +20,6 @@ allprojects {
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+tasks.register("clean", Delete::class){
+    delete(rootProject.buildDir)
 }
